@@ -14,7 +14,7 @@ exports.handler = (event, context, callback) => {
   // Step 1 translate the text
   let message = ''
   var translateParams = {
-    SourceLanguageCode: 'en',
+    SourceLanguageCode: event.code,
     TargetLanguageCode: 'de',
     Text: event.sentence
   }
@@ -51,6 +51,5 @@ exports.handler = (event, context, callback) => {
         });
       }
     });
-    // callback(null, { sentence: message })
   });  
 };
