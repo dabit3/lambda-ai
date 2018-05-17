@@ -14,8 +14,8 @@ exports.handler = (event, context, callback) => {
   // Step 1 translate the text
   let message = ''
   var translateParams = {
-    SourceLanguageCode: event.code,
-    TargetLanguageCode: 'de',
+    SourceLanguageCode: "en",
+    TargetLanguageCode: event.code,
     Text: event.sentence
   }
   
