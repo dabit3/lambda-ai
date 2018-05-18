@@ -7,14 +7,14 @@ exports.handler = (event, context, callback) => {
   var polly = new AWS.Polly();
   var s3 = new AWS.S3({
     params: {
-      Bucket: 'pollyaudio-ndbucket'
+      Bucket: 'rntranslate-userfiles-mobilehub-1492407502/public',
     }
-  });
+  })
 
   // Step 1 translate the text
   let message = ''
   var translateParams = {
-    SourceLanguageCode: "en",
+    SourceLanguageCode: 'en',
     TargetLanguageCode: event.code,
     Text: event.sentence
   }
